@@ -1,18 +1,24 @@
-# React + Vite
+# Finder Countries React 🌎
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Una aplicación moderna, responsiva y eficiente para buscar y consultar información detallada de países en tiempo real, conectada directamente a la API pública de **Rest Countries**.
 
-Currently, two official plugins are available:
+Este proyecto fue desarrollado con un enfoque en la arquitectura limpia de React, la modularización de componentes y la optimización del rendimiento en las búsquedas.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Demo
+Puedes ver la aplicación en vivo aquí: [Enlace de tu demo en Vercel](https://finder-countries-react.vercel.app/)
 
-## React Compiler
+## ✨ Funcionalidades Clave
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+- **Búsqueda Automatizada (Debounce):** La aplicación optimiza las peticiones a la API ejecutando la búsqueda automáticamente un segundo después de que el usuario termina de escribir, evitando sobrecargar el servidor con renders innecesarios.
+- **Diseño Responsivo de Alto Impacto:** Interfaz estilizada y completamente adaptable a dispositivos móviles, tablets y pantallas de escritorio utilizando el sistema de rejilla (Grid) de Bootstrap 5.
+- **Manejo Exhaustivo de Estados:** Control total sobre los estados de carga (*Loading con Spinners animados*), manejo de errores del servidor (*Alertas de Error*) y renderizado condicional.
+- **Formateo de Datos:** Presentación limpia de la información técnica (por ejemplo, conversión de números de población extensos a formato legible con separadores de miles).
 
-Note: This will impact Vite dev & build performances.
+## 🛠️ Arquitectura y Tecnologías
 
-## Expanding the ESLint configuration
+El proyecto sigue una estructura limpia separando la lógica de negocio de la interfaz visual:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **React 18** (Uso de Hooks: `useState`, `useEffect`)
+- **Custom Hooks:** Toda la lógica de peticiones asíncronas, debounce y control de estados está centralizada y encapsulada en el hook personalizado `useCountry.js`.
+- **Vite:** Entorno de desarrollo de alto rendimiento para el bundling.
+- **Bootstrap 5:** Framework CSS utilizado para la maquetación rápida, diseño de tarjetas simétricas y componentes responsivos.
